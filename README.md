@@ -9,7 +9,8 @@ Personal website
 
 ### :computer: Technologies
 
-- [JavaScript](https://www.javascript.com)
+<a href = "https://www.javascript.com" target = "_blank">- [JavaScript]</a>
+<!-- - [JavaScript](https://www.javascript.com) -->
 - [HTML](https://www.w3.org)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)

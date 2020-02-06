@@ -1,0 +1,332 @@
+@import "https: //fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
+
+:root { /* Aqui dentro posso colocar variaveis no CSS */
+  --color-green: #50fa7b;
+  --color-purple: #7159c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #282a36;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+header {
+  padding: 32px;
+  border-top: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  /* normalmente 10px a mais que font size */
+  margin: 0 16px;
+  /* espaçamento entre os elementos a */
+  text-decoration: none;
+  /* tira undeline do a */
+}
+
+.links a:hover {
+  color: var(--color-green);
+  transition: color 200ms;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 32px;
+}
+
+#wrapper img {
+  border-radius: 50%;
+  border: 5px solid var(--color-green);
+  margin-bottom: 32px;
+  height: 300px;
+}
+
+#wrapper h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+#wrapper h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+#wrapper p {
+  max-width: 500px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+#wrapper p a {
+  color: var(--color-green);
+}
+
+#links-footer a {
+  border-bottom: 1px solid var(--color-green);
+}
+
+/*=== CARDS ===*/
+.cards {
+  max-width: 800px;
+  margin: 0 auto; /* alinha ao meio */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-purple);
+  display: grid;
+  cursor: pointer;
+}
+
+.card_image-container img {
+  width: 100%;
+}
+
+.card_content,
+.card_info {
+  padding: 24px;
+}
+
+.card_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.card_price {
+  background-color: var(--color-purple);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/*=== MODAL ===*/
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .close-modal {
+  color: black;
+  position: absolute;
+  right: 0;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+/*=== MODAL.ACTIVE ===*/
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;  
+  top: 5%;
+}
+
+/*=== Conteúdos ===*/
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.course {
+  margin: 0 auto;
+  height: 600px;
+  width: 400px;
+  padding: 0px 90px 90 90px;
+  background-color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.course:hover {
+  border: 2px solid #50fa7b;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.course-img-container {
+  height: 200px;
+  width: 200px;
+  padding: 90px 90px 0 90px;
+  background-color: #333;
+  border-radius: 10px 10px 0 0;
+  
+}
+
+.course .img {
+  text-align: center;
+}
+
+.course_info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.course_info #purple {
+  color: var(--color-purple);
+}
+
+.course_info #orange {
+  color: orange;
+}
+
+.course_info #green {
+  color: var(--color-green);
+}
+
+.course_info,
+.course_modules {
+  padding: 0 24px;
+}
+
+.course_modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 190px;
+}
+
+.course_price {
+  background-color: var(--color-purple);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+/*=== MODAL COURSES ===*/
+
+/*=== MODAL COURSERS INACTIVE ===*/
+.modal-view {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-subview {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal-subview .close-modal {
+  color: black;
+  position: absolute;
+  right: 0;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+/*=== MODAL COURSES ACTIVE ===*/
+.modal-view.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe { /* obs: estava comentado */
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+}
+
+/*=== FEATURED ===*/
+.featured-wrapper.card_image-container {
+  position: relative;
+}
+.featured {
+  background-color: #FFEE99;
+  color: #111;
+  padding: 2px 8px;
+  position: absolute;
+  right: 8px; /* margin-right?*/
+  top: -10px; /* deixar? */
+  border-radius: 5px;
+}
+
+/*=== VIDEO VIEW ===*/
+.video {
+  margin: 0 auto; /* em cima e em baixo é zero e no resto é no meio */
+  max-width: 800px;
+}
+
+.card_video-container {
+  position: relative;
+  padding-top: 62.5%;
+}
+
+/*=== NOT-FOUND PAGE ===*/
+.error {
+  margin-top: 32px;
+}
+
+.error #first{
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.error #middle {
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.error #last {
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+}

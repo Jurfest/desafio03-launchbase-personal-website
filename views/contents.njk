@@ -1,0 +1,59 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Conteúdos - Diego Jurfest</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <div id="wrapper">
+    <h1>Conteúdos</h1>
+  </div>
+
+  <section class="courses">
+    {% for item in items %}
+    <div class="course" id="{{item.id}}">
+      <div class="course-img-container">
+        <img src="./assets/{{item.id}}.svg" alt="{{item.id}}.svg">
+      </div>
+      <div class="course_info">
+
+      {% if item.id == "starter" %}
+        <p id="purple">{{item.descriptionOne}}</p>
+      {% endif %}
+      {% if item.id == "launchbase" %}
+        <p id="orange">{{item.descriptionOne}}</p>
+      {% endif %}
+      {% if item.id == "gostack" %}
+        <p id="green">{{item.descriptionOne}}</p>
+      {% endif %}
+
+      <p>{{item.descriptionTwo}}</p>
+      <p>{{item.descriptionThree}}</p>
+      </div>
+      <div class="course_modules">
+        <p>{{item.modules}} módulos</p>
+        <p class="course_price">{{item.price}}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    </div>
+
+  </section>
+
+  <div class="modal-view">
+    <div class="modal-subview">
+      <a class="close-modal">
+        <i class="material-icons">close</i>
+      </a>
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts_skylab.js"></script>
+
+{% endblock %}

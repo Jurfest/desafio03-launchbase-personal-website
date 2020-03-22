@@ -14,12 +14,12 @@ Personal website
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 
+
 ### Overview
 
 <h1 align="center">
     <img alt="" src="./public/assets/preview.png" width="940px" />
 </h1>
-
 
 ### Thats it ! :wave:
 
